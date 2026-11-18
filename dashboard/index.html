@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pre-Token Launch Radar</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <div class="mark"></div>
+    <div>
+      <h1>Pre-Token Launch Radar</h1>
+      <p class="sub">198 protocols that record no token, ranked by implied value = value if it launches &times; launch odds, both derived from the snapshot's own comparables.</p>
+      <p class="meta">Snapshot 2026-11-14 &middot; DefiLlama &middot; No network &middot; model launch-radar-1.0</p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="kpi" class="kpi"></section>
+
+  <section class="cohort" id="cohort"></section>
+
+  <section class="controls">
+    <div class="tabs" id="tabs"></div>
+    <div class="filters">
+      <select id="cat"></select>
+      <select id="chain"></select>
+      <input id="search" type="text" placeholder="search name, slug or category">
+    </div>
+  </section>
+
+  <section class="tablewrap">
+    <table id="board">
+      <thead></thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <aside id="detail" class="detail" hidden>
+    <button class="close" id="close-detail">&times;</button>
+    <div class="d-head"></div>
+    <div class="d-grid">
+      <div class="d-col">
+        <div class="d-value"></div>
+        <div class="d-barbox"></div>
+        <div class="d-comps"></div>
+      </div>
+      <div class="d-col">
+        <h3>How the figure is made</h3>
+        <ol class="d-made"></ol>
+      </div>
+    </div>
+    <div class="d-farm-table"></div>
+    <div class="d-steps"></div>
+  </aside>
+</main>
+
+<footer class="method" id="method"></footer>
+
+<script src="../data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
