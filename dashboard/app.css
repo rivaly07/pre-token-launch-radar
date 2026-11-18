@@ -58,6 +58,18 @@ h1{margin:0;font-size:1.25rem;font-weight:700;letter-spacing:-.02em}
 /* detail */
 .detail{position:fixed;top:0;right:0;bottom:0;width:520px;max-width:100vw;background:var(--card);border-left:1px solid var(--line);overflow-y:auto;z-index:100;padding:var(--pad);display:flex;flex-direction:column;box-shadow:-24px 0 48px rgba(0,0,0,.45)}
 body.detail-open .topbar,body.detail-open .kpi,body.detail-open .cohort,body.detail-open .tabs,body.detail-open .tablewrap,body.detail-open .method{padding-right:536px}
+body.detail-open .tablewrap{max-width:calc(100vw - 536px)}
+/* detail panel repeats category/chains/age/odds, so the board drops them and fits without hscroll */
+body.detail-open #board th:nth-child(3),
+body.detail-open #board td:nth-child(3),
+body.detail-open #board th:nth-child(4),
+body.detail-open #board td:nth-child(4),
+body.detail-open #board th:nth-child(7),
+body.detail-open #board td:nth-child(7),
+body.detail-open #board th:nth-child(9),
+body.detail-open #board td:nth-child(9){display:none}
+body.detail-open #board th,body.detail-open #board td{padding:7px 6px}
+body.detail-open .d-value{font-size:1.5rem}
 .close{position:absolute;top:10px;right:10px;width:28px;height:28px;border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:50%;font-size:1.2rem;cursor:pointer;line-height:1}
 .close:hover{background:var(--bg);color:var(--fg)}
 .d-head{margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--line)}

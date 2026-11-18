@@ -67,6 +67,12 @@ function renderTabs(){
 
 /* Table */
 let sortCol='rank', sortDir=1;
+function chainCell(chains){
+  if(!chains||!chains.length) return '\u2014';
+  const head=chains.slice(0,3).join(', ');
+  const rest=chains.length-3;
+  return esc(head)+(rest>0?` <span class=chain-more style="color:#5a5a5a">+${rest}</span>`:'');
+}
 function renderTable(){
   let rows=ROWS.filter(r=>{
     if(activeTab!=='all' && r.status!==activeTab) return false;
@@ -95,7 +101,7 @@ function renderTable(){
       <td class=mono>${r.rank}</td>
       <td><strong>${esc(r.name)}</strong><br><span class=mono style="color:#888;font-size:.7rem">${esc(r.slug)}</span></td>
       <td>${esc(r.category)}</td>
-      <td class=mono style="font-size:.7rem">${r.chains.join(', ')}</td>
+      <td class=mono style="font-size:.7rem" title="${esc(r.chains.join(', '))}">${chainCell(r.chains)}</td>
       <td class=mono>${fmt(r.tvl_usd)}</td>
       <td class=mono>${r.change_7d==null?'—':(r.change_7d>=0?'+':'')+r.change_7d.toFixed(2)+'%'}</td>
       <td class=mono>${fmtDays(r.age_days)}</td>
