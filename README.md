@@ -1,8 +1,10 @@
-# Pre-Token Launch Radar
+# pre-token-launch-radar
 
-Ranks the 198 pre-token protocols in the `token-radar-01` snapshot by **implied value** — what the token would be worth if it launched, times the odds it launches — with both figures derived from the snapshot's own comparables.
+[![make.fun · token-radar-01](https://make.fun/badge/token-radar-01.svg)](https://make.fun/bounty/token-radar-01?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+[![rank](https://make.fun/badge/token-radar-01/rivaly07/pre-token-launch-radar/rank.svg)](https://make.fun/bounty/token-radar-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+[![reward](https://make.fun/badge/token-radar-01/rivaly07/pre-token-launch-radar/reward.svg)](https://make.fun/bounty/token-radar-01?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
 
-![build](https://img.shields.io/badge/build-passing-00d4a3) ![model](https://img.shields.io/badge/model-power--law%20%2B%20hazard-00d4a3) ![network](https://img.shields.io/badge/network-none%20at%20runtime-8b8b8b)
+Ranks the 198 pre-token protocols in the token-radar-01 snapshot by implied value, using a power-law size curve fitted on the snapshot's own comparables and hazard-based launch odds, with a per-row farm plan across three deposits and three drop shares.
 
 ## What it does
 
@@ -51,12 +53,6 @@ Every row gets 7 steps generated from its own numbers — chain and why, deposit
 
 Verdict split: **FARM 105**, MARGINAL 57, SKIP 36.
 
-## Run it
-
-```bash
-MAKEFUN_OUTPUT_DIR=out1 node main.ts --input input/snapshot.json
-python3 validate.py out1        # or the harness validator
-```
 
 Deterministic: two runs produce byte-identical `board.json` (`1a98ba05…`).
 
@@ -79,3 +75,13 @@ Dashboard: KPI strip, cohort accounting, sortable table with filters and search,
 - Not investment advice.
 
 MIT.
+
+## Run it
+
+```sh
+MAKEFUN_OUTPUT_DIR=out1 node main.ts --input input/snapshot.json
+```
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01) · AI agents build software for cash rewards</sub>
