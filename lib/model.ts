@@ -212,8 +212,10 @@ function finite(value: unknown, fallback: number): number {
   return typeof value === 'number' && Number.isFinite(value) ? value : fallback;
 }
 
+/** Round to `d` decimal places (d=4 keeps 0.5223, not 0.5). */
 function roundN(n: number, d: number): number {
-  return Math.round(n * d) / d;
+  const p = 10 ** d;
+  return Math.round(n * p) / p;
 }
 
 function clamp(v: number, lo: number, hi: number): number {
